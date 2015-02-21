@@ -164,7 +164,7 @@ def list_nodes(call=None):
                 'state': str(node['status']),
             }
         page += 1
-        fetch = 'next' in items['links']['pages']
+        fetch = 'next' in items['droplets']
     return ret
 
 
@@ -191,7 +191,7 @@ def list_nodes_full(call=None, forOutput=True):
                     value = str(value)
                 ret[node['name']][item] = value
         page += 1
-        fetch = 'next' in items['links']['pages']
+        fetch = 'next' in items['droplets']
     return ret
 
 
